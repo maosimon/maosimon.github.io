@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>background position calc</title>
+        <style>
+            /*class是.而id是#*/
+            .emText{ color: bisque;}
+            .linda{ color: blue;}
+            .simon{ color: blueviolet;}
+            .bae{ color: aquamarine;}
+            #latest{ color: rgb(94, 255, 0);}
+
+        </style>
+    </head>
+    <body>
+        <!---最靠近class的優先選擇-->
+        <p class="emText">hello bro</p>
+        <p class="linda simon bae">1234</p>
+        <p class="simon">1234</p>
+        <p class="linda">234</p>
+        <p id="latest">ID用#字號</p>
+    </body>
+</html>
