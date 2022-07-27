@@ -7,11 +7,67 @@
 
         <title>background position calc</title>
         <style>
+            /*字型效果*/
+            p{color:rgba(252,186,3,0.8);
+	            font-size:40px;
+	            letter-spacing: 10px;
+	            line-height: 1.5;
+	            font-weight: 500;
+	            text-align:right;/*可選擇靠left ,center*/
+	            font-family: '標楷體', sans-serif;
+	           }
+	           div {
+	            font-family:Arial,'Times New Roman','Microsoft YaHei'; font:bold 12px/0.75em Arial,'Times New Roman','Microsoft YaHei';
+	            font-size:40px;
+	            line-height: 1.5;
+	            }
+                /*個別設定字體*/
+	           body { font-family: verdana, Times New Roman, 新細明體, 微軟正黑體; }
 
-            
+               /*邊框效果*/
+               div{
+                background : red;
+                width : 200px;
+                height : 200px;
+                overflow: hidden;
+                border: 5px solid black;
+                padding: 50px 10px 20px 40px;
+                margin: 50px;
+               }
+               /*display搭配inline-block屬於平排，不加inline屬於格行*/
+               div{
+                background : red;
+                width : 200px;
+                height : 200px;
+                display: inline-block;
+               }
+               a{
+                display: inline-block;
+               }
         </style>
     </head>
     <body>
+        <!---字型效果-->
+        <p>天氣很好</p>
+        <p>hello</p>
+        <div>abcdefg</div>
+        <div>你還好嗎</div>
+        <!--個別設定字體-->
+        <div><span style="font-family: verdana, Times New Roman, 新細明體, 微軟正黑體;">設定字型</span></div>
+        哈哈啊哈
 
+        <!---邊框效果-->
+        <div>dsljfhlkjsrhpoieruhflkeoidwfhn</div>
+        <div>dslkfjlksdjvdlksjf</div>
+
+        <!---display搭配inline-block屬於平排，不加inline屬於格行-->
+        <div>
+            <p>12345</p>
+        </div>
+        <div>
+            <p>12345</p>
+        </div>
+        <a>asdf</a>
+        <a>asdf</a>
     </body>
 </html>

@@ -1,5 +1,6 @@
 <!---css用於排版-->
 <!---css裡面的選擇器-->
+<!---任何的名稱都要與網頁有關會比較清楚-->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -46,6 +47,10 @@
             /*同層相鄰選擇器*/
             h7 {color: red;}
             h7 + p {color: green;}
+            /*子選擇器*/
+            article > p {color: red;}
+            .mao > p {color: green;}
+            #simon > p {color: blue;}
 
 
         </style>
@@ -84,5 +89,16 @@
         <h7>此區域會套用紅色</h7>
         <p>因為和H7相鄰所以套用紅色</p>
         <p>與H7部相鄰所以套用預設顏色</p>
+
+        <!---子選擇器-->
+        <article>
+            <p>hello bro</p>
+        </article>
+        <div class="mao">
+            <p>what is up?</p>
+        </div>
+        <div id="simon">
+            <p>nothing man</p>
+        </div>
     </body>
 </html>
