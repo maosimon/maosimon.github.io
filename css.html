@@ -1,3 +1,5 @@
+<!---css用於排版-->
+<!---css裡面的選擇器-->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -7,20 +9,80 @@
         <title>background position calc</title>
         <style>
             /*class是.而id是#*/
-            .emText{ color: bisque;}
+            .emText{ color: yellow;}
             .linda{ color: blue;}
-            .simon{ color: blueviolet;}
-            .bae{ color: aquamarine;}
-            #latest{ color: rgb(94, 255, 0);}
+            .simon{ color: purple;}
+            .bae{ color: green;}
+            #latest{ color: black;}
+
+            /*通用選擇器*/
+            *{color: red;} /*只要是*號出現就是通用選擇器*/
+
+            /*可以使用google font*/
+            /*型態選擇器*/ /*裡面有，表示群組選擇器*/
+            h1,h2,h3,h4,h5{
+            font-family: 'Noto Sans TC', sans-serif;
+            color: yellow;
+            }
+
+            p,a,span,li,label{
+            font-family: 'Open Sans', sans-serif;
+            color: aquamarine;
+            }
+
+            /*屬性選擇器*/
+            div{color: black;}
+            div[title] {color: red;}
+
+            /*下面這兩行不常用*/
+            div[title=fishbecat] {color: green;}
+            div[title~=fishbecat’s] {color: blue;}
+
+            /*後代選擇器*/
+            a {color: black;}
+            h1 a {color: green;}
+            #mao a {color: red;}
+
+            /*同層相鄰選擇器*/
+            h7 {color: red;}
+            h7 + p {color: green;}
+
 
         </style>
     </head>
     <body>
+        <!--class是.而id是#-->
         <!---最靠近class的優先選擇-->
         <p class="emText">hello bro</p>
         <p class="linda simon bae">1234</p>
         <p class="simon">1234</p>
         <p class="linda">234</p>
         <p id="latest">ID用#字號</p>
+
+        <!---型態選擇器-->
+        <li><span>
+            <a href="portfolio.html" target="_blank">See my portfolio</a>
+        </span></li>
+        <h1>See my portfolio</h1>
+
+        <!---屬性選擇器-->
+        <div>此區域會套用黑色</div>
+        <div title="blog">此區域會套用紅色</div>
+        <div title="fishbecat">此區域會套用綠色</div>
+        <div title="fishbecat’s blog">此區域會套用藍色</div>
+
+        <!---後代選擇器-->
+        <a>只設定a標籤會套用黑色</a>
+        <h1>
+            <a>在h1裡面的a標籤會套用綠色</a>
+        </h1>
+        <div id="mao">
+            <a>在ID=mao裡面的a標籤會套用紅色</a>
+        </div>
+
+        <!---同層相鄰選擇器-->
+        <h7>此區域會套用紅色</h7>
+        <p>因為和H7相鄰所以套用紅色</p>
+        <p>與H7部相鄰所以套用預設顏色</p>
     </body>
 </html>
