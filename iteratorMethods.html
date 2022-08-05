@@ -1,0 +1,53 @@
+<script>
+    //entries() 方法返回一個新的Array Iterator對象，該對象包含數組中每個索引的鍵/值對
+    array1=[10, 20, 30, 40, 50];
+    console.log("原始陣列", array1)
+    //entries()
+    var iterator1 = array1.entries();
+    console.log( iterator1.next().value ); //Array [0,10]
+    
+    //values()
+    var iterator1 = array1.values();
+    console.log( iterator1.next().value ); // 10
+
+    //filter()
+    var filtered = array1.filter(value => value > 25);
+    console.log( filtered ) //[30, 40, 50]
+
+    /*箭頭函式
+    基本語法
+    (參數1, 參數2, ..., 參數N) => {陳述式;}
+    */ 
+
+    function greeting(){
+        console.log("hello");
+    }
+    greeting();
+    //改成箭頭的縮寫
+    var greeting = ()=> {
+        console.log("hello2");
+    }
+    
+    greeting();
+    
+    var greeting = () =>"welcome"
+    console.log(greeting());
+    //其實等於這個寫法
+    var greeting = function(){
+        return "welcome"
+    }
+
+    var arr = ["a", "b", "c"];
+    var iter = arr.entries();
+    var a =[];
+
+    // for(var i=0; i< arr.length; i++)    //實際使用的是這個
+    for (var i=0; i< arr.length+1; i++){   //注意，是length+1，比數組的長度大
+        var tem = iter.next();             //每次跌貸時更新next
+        console.log(tem.done);             //這裡可以看到更新後的done都是false
+        if(tem.done !== true){             //遍历迭代器结束done才是true
+            console.log(tem.value);
+            a[i]= tem.value;
+        }
+    }
+</script>
