@@ -88,12 +88,17 @@ p.lead{
 
 }
 #latest .col-md-4 .outer{
-	box-shadow: 0 0 8px 0 rgba(0,0,0,0.08);
+	box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.833);
 	padding: 0px;
 	margin: 0 5px;
 }
 #latest .lower h3{
 	font-size: 21px;
+	margin-bottom: 20px;
+}
+#latest .upper h5{
+	font-size: 30px;
+	margin-top: 20px;
 	margin-bottom: 20px;
 }
 #latest a{
